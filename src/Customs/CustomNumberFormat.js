@@ -29,7 +29,7 @@ const NumberFormat = ({ value, onValueChanged, fractionDigits = 2, ...props }) =
   const onChange = e => {
     const value = formatNumber(e.target.value);
     if(value){
-      onValueChanged(value)
+      onValueChanged(Number(value).toFixed(2))
     }
   }
   return (
